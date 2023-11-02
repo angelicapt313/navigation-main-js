@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-.nav{
-    width: 90%;
-    margin: 20px auto;
-}
-
-.nav__container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.img-logo, .img-menu{
-    width: 100%;
+body{
+    font-family: 'Epilogue', sans-serif;
 }
