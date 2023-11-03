@@ -13,9 +13,59 @@ body{
     font-family: 'Epilogue', sans-serif;
 }
 
+/* CSS */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .nav__hamburguer{
-    background: url('/images/icon-menu.svg') no-repeat center;
-    height: 50px;
+    background-image: url('/images/icon-menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
     width: 30px;
     cursor: pointer;
+    /* Hacer visible el menú hamburguer/close */
+    z-index: 100;
+    transition: background-image .3s;
+}
+
+/* Class extra nav-hamburguer open */
+.nav__hamburguer--open{
+    background-image: url('/images/icon-close-menu.svg');
+}
+
+.nav__overlay{
+    background-color: rgba(0, 0, 0, 0.528);
+    /* Sacar del flujo de flexbox */
+    position: fixed;
+    /* Posicionarlo en base a todo el navegador */
+    inset: 0;
+}
+
+.nav__menu{
+    background-color: white;
+    /* Position absolute en relación al fixed */
+    position: absolute;
+    /* top:0 bottom:0 para ocupar el 100% de height */
+    top:0;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+    max-width: 400px;
+    padding: 0;
+    list-style: none;
+    /* En caso de requerir más espacio se genera un scroll */
+    overflow: auto;
+    padding: 70px 0;
 }
