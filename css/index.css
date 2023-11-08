@@ -11,6 +11,7 @@
 
 body{
     font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
 }
 
 /* CSS */
@@ -68,4 +69,65 @@ body{
     /* En caso de requerir más espacio se genera un scroll */
     overflow: auto;
     padding: 70px 0;
+}
+
+.nav__item{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    cursor: pointer;
+    color: var(--almost-black);
+}
+
+.nav__item:has(.nav__parent){
+    padding: 0;
+}
+
+.nav__parent{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.nav__inner{
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2px;
+    overflow: hidden;
+    height: 0;
+    transition: height .4s;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--almost-black);
+}
+
+.nav__dropdown{
+    padding: 13px 0;
+}
+
+.nav__login{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav__login--border{
+    border: 2px solid var(--medium-gray);
+    border-radius: 16px;
+    margin-top: 15px;
+}
+
+.nav__sign{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--medium-gray);
+    padding: 13px 0;
 }
