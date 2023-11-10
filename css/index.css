@@ -52,6 +52,22 @@ body{
     position: fixed;
     /* Posicionarlo en base a todo el navegador */
     inset: 0;
+
+    /* Ocultar el menusidebar */
+    opacity: 0;
+    /* desactivar eventos mouse */
+    /* pointer-events: none; */
+    transition: .3s opacity;
+}
+
+/* Class extra nav__overlay open */
+.nav__overlay--open{
+    inset: 0;
+    opacity: 1;
+
+    /* Que vuelva a su estado original */
+    pointer-events: unset;
+    
 }
 
 .nav__menu{
@@ -131,3 +147,4 @@ body{
     color: var(--medium-gray);
     padding: 13px 0;
 }
+
