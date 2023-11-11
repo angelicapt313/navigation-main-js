@@ -56,13 +56,12 @@ body{
     /* Ocultar el menusidebar */
     opacity: 0;
     /* desactivar eventos mouse */
-    /* pointer-events: none; */
+    pointer-events: none;
     transition: .3s opacity;
 }
 
 /* Class extra nav__overlay open */
 .nav__overlay--open{
-    inset: 0;
     opacity: 1;
 
     /* Que vuelva a su estado original */
@@ -116,6 +115,7 @@ body{
     display: grid;
     gap: 2px;
     overflow: hidden;
+    
     height: 0;
     transition: height .4s;
 }
