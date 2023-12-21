@@ -17,7 +17,6 @@ menuOverlay.addEventListener('click', function(e){
         //parentElement: Acceder al padre(nav__item) del elemento actual(nav__parent)
         //Children(ArrayHTMLCollection): Acceder a sus hijos(span, ul)
         const subMenu = elementTarget.parentElement.children[1];
-        console.log(subMenu);
 
         if(window.innerWidth < 768){
 
@@ -25,8 +24,6 @@ menuOverlay.addEventListener('click', function(e){
             let heightSubMenu = (subMenu.clientHeight == 0) ? subMenu.scrollHeight : 0;
 
             subMenu.style.height = `${heightSubMenu}px`
-        }else{
-       
         }
     }
 })

@@ -83,13 +83,13 @@ body{
     list-style: none;
     /* En caso de requerir más espacio se genera un scroll */
     overflow: auto;
-    padding: 70px 0;
+    padding: 80px 0;
 }
 
 .nav__item{
     width: 80%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 17px 0;
     cursor: pointer;
     color: var(--almost-black);
 }
