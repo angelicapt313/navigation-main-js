@@ -148,3 +148,67 @@ body{
     padding: 13px 0;
 }
 
+/* MAIN */
+.main__section{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-areas:
+    "img img img"
+    ". text ."
+    "brands brands brands"
+    ;
+}
+
+.main__picture{
+    grid-area: img;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.main__article{
+    grid-area: text;
+    text-align: center;
+    padding: 56px 0;
+}
+
+.main__title{
+    font-size: 2rem;
+}
+
+.main__paragraph{
+    line-height: 1.5;
+    margin: 1.5em 0;
+    font-size: 16px;
+}
+
+.main__button{
+    background-color: var(--almost-black);
+    color: white;
+    display: inline-block;
+    padding: .8em 1em;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main__img{
+    width: 100%;
+}
+
+.main__brands{
+   grid-area: brands;
+   width: 90%;
+   margin: 0 auto;
+   display: grid;
+   gap: 1em;
+   grid-auto-flow: column;
+   grid-auto-columns: minmax(30px, 100px);
+   align-items: center;
+   justify-content: space-between;
+   
+}
+
+.main__brand{
+    width: 100%;
+}
