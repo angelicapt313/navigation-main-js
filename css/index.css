@@ -212,3 +212,37 @@ body{
 .main__brand{
     width: 100%;
 }
+
+@media (width > 768px) {
+    .nav{
+        gap: 2em;
+        overflow: visible;
+        padding: 50px 0 0;
+        
+    }
+
+    .nav__hamburguer{
+        display: none;
+    }
+
+    .nav__overlay{
+        position:unset;
+        background-color: transparent;
+        opacity: 1;
+        pointer-events:unset;
+        flex: 1;
+        
+    }
+
+    .nav__menu{
+        position: unset;
+        width: 100%;
+        max-width: unset;
+        padding: 0;
+        overflow: unset;
+
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+}
