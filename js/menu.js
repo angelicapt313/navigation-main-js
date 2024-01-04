@@ -11,7 +11,7 @@ menuHamburguer.addEventListener('click', function(e){
 
 menuOverlay.addEventListener('click', function(e){
     const elementTarget = e.target;
-    // console.log(e.target.classList.value)
+    
 
     if(isActive(elementTarget, 'nav__parent') ){
         //parentElement: Acceder al padre(nav__item) del elemento actual(nav__parent)
@@ -24,6 +24,8 @@ menuOverlay.addEventListener('click', function(e){
             let heightSubMenu = (subMenu.clientHeight == 0) ? subMenu.scrollHeight : 0;
 
             subMenu.style.height = `${heightSubMenu}px`
+        }else{
+            subMenu.classList.toggle('nav__inner--show');
         }
     }
 })

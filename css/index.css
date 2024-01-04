@@ -245,4 +245,35 @@ body{
         align-items: center;
         gap: 1em;
     }
+
+    .nav__item{
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .nav__inner{
+        position: absolute;
+        left: 0;
+        padding: 0;
+        width: max-content;
+        height: auto;
+
+        padding: 2em;
+        background-color: white;
+        z-index: 1000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+        transition: opacity .3s;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav__inner--show{
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+
 }
