@@ -1,5 +1,6 @@
 const menuHamburguer = document.querySelector('.nav__hamburguer');
 const menuOverlay = document.querySelector('.nav__overlay');
+let visibleDropdown = menuOverlay;
 
 
 menuHamburguer.addEventListener('click', function(e){
@@ -25,10 +26,21 @@ menuOverlay.addEventListener('click', function(e){
 
             subMenu.style.height = `${heightSubMenu}px`
         }else{
-            subMenu.classList.toggle('nav__inner--show');
+            //!SI EL ELEMENTO SUBMENU TIENE LA CLASS NAV__INNER--SHOW SIGNIFICA QUE ARROJARÁ FALSO
+            if(!isActive(subMenu, 'nav__inner--show')){
+                closeDropdown(visibleDropdown);
+            }
+                subMenu.classList.toggle('nav__inner--show');
+                visibleDropdown = subMenu;
         }
     }
 })
+
+function closeDropdown(visibleDropdown){
+    if(isActive(visibleDropdown, 'nav__inner--show')){
+        visibleDropdown.classList.remove('nav__inner--show');
+    }
+}
 
 
 function isActive(element, string){
@@ -38,7 +50,7 @@ function isActive(element, string){
 
 
 window.addEventListener('resize', ()=>{
-    
+    closeDropdown(visibleDropdown);
     if(window.innerWidth > 768){
         const navInners = document.querySelectorAll('.nav__inner');
 
