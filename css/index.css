@@ -12,6 +12,7 @@
 body{
     font-family: 'Epilogue', sans-serif;
     font-size: 18px;
+    min-height: 100vh;
 }
 
 /* CSS */
@@ -149,6 +150,7 @@ body{
 }
 
 /* MAIN */
+
 .main__section{
     overflow: hidden;
     display: grid;
@@ -260,7 +262,7 @@ body{
         width: max-content;
         height: auto;
 
-        padding: 2em;
+        padding: 12px;
         background-color: white;
         z-index: 1000;
         border-radius: 10px;
@@ -275,5 +277,67 @@ body{
         pointer-events: unset;
     }
 
+    .nav__login{
+        width: max-content;
+        margin: 0;
+        margin-left: auto;
+    }
 
+    .nav__login--border{
+        margin: 0;
+        padding: 0 3%;
+    }
+
+    .main__section{
+        margin: 2% auto;
+        max-width: 1200px;
+        width: 90%;
+        gap: 2em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "text img"
+        "brands .";
+
+        padding: 70px 0;
+    }
+
+    .main__picture{
+        max-height: 500px;
+    }
+
+    .main__img{
+        width: 100%;
+    }
+
+    .main__article{
+        text-align: left;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__brands{
+        margin: auto 0 0 0;
+    }
+
+    .main__texts{
+        margin: auto 0;
+    }
+
+    .main__title{
+        font-size: 3.7rem;
+    }
+
+    .main__paragraph{
+        font-size: 18px;
+        padding: 10px 0;
+        width: 80%;
+    }
+
+    .main__button--active{
+        pointer-events: none;
+        background-color: var(--almost-white);
+        color: var(--almost-black);
+        border: 1px var(--almost-black) solid;
+    }
 }

@@ -1,7 +1,12 @@
 const menuHamburguer = document.querySelector('.nav__hamburguer');
 const menuOverlay = document.querySelector('.nav__overlay');
+const btnActive = document.querySelector('.main__button');
 let visibleDropdown = menuOverlay;
 
+
+btnActive.addEventListener('click', function(){
+    btnActive.classList.add('main__button--active');
+})
 
 menuHamburguer.addEventListener('click', function(e){
     menuHamburguer.classList.toggle('nav__hamburguer--open');
@@ -15,18 +20,15 @@ menuOverlay.addEventListener('click', function(e){
     
 
     if(isActive(elementTarget, 'nav__parent') ){
-        //parentElement: Acceder al padre(nav__item) del elemento actual(nav__parent)
-        //Children(ArrayHTMLCollection): Acceder a sus hijos(span, ul)
         const subMenu = elementTarget.parentElement.children[1];
 
         if(window.innerWidth < 768){
 
-            // `¿Height actual de submenu es = 0?` SI: el Height ahora es igual al ScrollHeight(alto mínimo que se le da a un elemento para que exista)   
             let heightSubMenu = (subMenu.clientHeight == 0) ? subMenu.scrollHeight : 0;
 
             subMenu.style.height = `${heightSubMenu}px`
         }else{
-            //!SI EL ELEMENTO SUBMENU TIENE LA CLASS NAV__INNER--SHOW SIGNIFICA QUE ARROJARÁ FALSO
+       
             if(!isActive(subMenu, 'nav__inner--show')){
                 closeDropdown(visibleDropdown);
             }
